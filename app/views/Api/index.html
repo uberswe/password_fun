@@ -1,7 +1,37 @@
 {{template "header.html" .}}
 
-<div class="col-md-6">
-    {{template "mailchimpsubapi.html" .}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class=page-header id=overview>API Documentation</h1>
+            <p class=lead>Currently there is not a lot to the API. Use the following API call to generate one
+                or more passwords which are returned as a json string. In the future we plan to support different
+            formats, api keys, and more.</p>
+            <h2 id=overview-doctype>POST /api/v1/passwords</h2>
+            <p>POST requests are recommended but GET requests will work as well. All parameters are optional. Please
+            do sign up for our newsletter if you plan on using this API as we may require an API key in the future.</p>
+            <p>The following parameters and values are supported, all are optional.</p>
+            <figure class=highlight>
+                <pre>
+                    <code class=language-html data-lang=js>
+                        count: 1-100
+                        length: 1-100
+                        capital: 1 or 0   // Upper case letters
+                        lower: 1 or 0     // Lower case letters
+                        special: 1 or 0   // Special characters
+                        numbers: 1 or 0   // Numbers
+                        spaces: 1 or 0    // Spaces
+                    </code>
+                </pre>
+            </figure>
+            <p>All parameters should be sent as form data. No parameters will generate random results.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{template "mailchimpsubapi.html" .}}
+        </div>
+    </div>
 </div>
 
 {{template "footer.html" .}}
