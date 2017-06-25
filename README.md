@@ -1,5 +1,7 @@
 # Password.fun
 
+Created by [Markus Tenghamn](http://tenghamn.com)
+
 This is my first project with golang, I personally feel that the code is a bit messy as
 I am learning but things seem to work well at the moment. I would be open to feedback and
 criticism and if anyone is interested feel free to contact me if you are interested in developing
