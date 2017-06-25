@@ -7,9 +7,8 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Generate one or more passwords</h2>
-            <p>Use <a href="http://password.fun">Password.fun</a> to generate one or more passwords. We highly
-                recommend that you generate several long random string and use only a 20+ character part of one of
-                the strings for your actual password. Read about why we recommend this <a href="/faq">here</a>.</p>
+            <p>Använd <a href="http://lösenord.xyz">Lösenord.xyz</a> för att skapa ett eller flera lösenord. Vi rekommenderar starkt
+                att du genererar flera lösenord samtidigt med 20+ tecken. Läs mer om varför vi rekommenderar det <a href="/faq">här</a>.</p>
 
             <div class="col-md-12">
                 <div class="well">
@@ -26,13 +25,13 @@
         <div class="col-md-6">
             <form id="passwordform" method="post" onsubmit="return generatePasswords();">
                 <div class="form-group">
-                    <label for="count">Number of passwords</label>
+                    <label for="count">Antal lösenord</label>
                     <input name="count" type="text" class="form-control" id="count" aria-describedby="countHelp"
                            placeholder="random" value="{{ .count }}">
                     <small id="countHelp" class="form-text text-muted">Enter a number 1-100</small>
                 </div>
                 <div class="form-group">
-                    <label for="length">Length of password(s)</label>
+                    <label for="length">Längd på lösenord</label>
                     <input name="length" type="text" class="form-control" id="length" aria-describedby="lengthHelp"
                            placeholder="random" value="{{ .length }}">
                     <small id="lengthHelp" class="form-text text-muted">Enter a number 1-100</small>
@@ -41,7 +40,7 @@
                     <label class="form-check-label">
                         <input name="capital" type="checkbox" aria-describedby="uppercaseHelp" class="form-check-input"
                                {{ if eq .capital "true"}} CHECKED{{end}}>
-                        Include uppercase letters
+                        Inkludera stora bokstäver
                         <div class="col-xs-12">
                             <small id="uppercaseHelp" class="form-text text-muted">ABCDEFGHIJKLMNOPQRSTUVWXYZ</small>
                         </div>
@@ -51,7 +50,7 @@
                     <label class="form-check-label">
                         <input name="lower" type="checkbox" aria-describedby="lowercaseHelp" class="form-check-input"
                                {{ if eq .lower "true"}} CHECKED{{end}}>
-                        Include lowercase letters
+                        Inkludera små bokstäver
                         <div class="col-xs-12">
                             <small id="lowercaseHelp" class="form-text text-muted">abcdefghijklmnopqrstuvwxyz</small>
                         </div>
@@ -61,7 +60,7 @@
                     <label class="form-check-label">
                         <input name="special" type="checkbox" aria-describedby="specialHelp" class="form-check-input"
                                {{ if eq .special "true"}} CHECKED{{end}}>
-                        Include special characters
+                        Inkludera speciella tecken
                         <div class="col-xs-12">
                             <small id="specialHelp" class="form-text text-muted">!@#$%^&*()-_=+,.?/:;{}[]`~</small>
                         </div>
@@ -71,7 +70,7 @@
                     <label class="form-check-label">
                         <input name="numbers" type="checkbox" aria-describedby="numbersHelp" class="form-check-input"
                                {{ if eq .numbers "true"}} CHECKED{{end}}>
-                        Include numbers
+                        Inkludera nummer
                         <div class="col-xs-12">
                             <small id="numbersHelp" class="form-text text-muted">1234567890</small>
                         </div>
@@ -81,7 +80,7 @@
                     <label class="form-check-label">
                         <input name="spaces" type="checkbox" aria-describedby="spaceHelp" class="form-check-input"
                                {{ if eq .spaces "true"}} CHECKED{{end}}>
-                        Include spaces
+                        Inkludera mellanslag
                         <div class="col-xs-12">
                             <small id="spaceHelp" class="form-text text-muted">" "</small>
                         </div>
@@ -90,17 +89,17 @@
                 <div class="form-check">
                     <label class="form-check-label">
                         <input name="remember" type="checkbox" class="form-check-input" {{ if eq .remember "true"}} CHECKED{{end}}>
-                        Remember my choices
+                        Kom ihåg mina val
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
                         <input name="highlight" type="checkbox" class="form-check-input" {{ if eq .highlight "true"}} CHECKED{{end}}>
-                        Highlight a random password after generating
+                        Markera automatiskt ett slumpmässigt lösenord för att göra det lättare att kopiera
                     </label>
                 </div>
                 <div class="col-xs-12" style="height:25px;"></div>
-                <button type="submit" class="btn btn-primary">Generate</button>
+                <button type="submit" class="btn btn-primary">Skapa</button>
             </form>
         </div>
     </div>

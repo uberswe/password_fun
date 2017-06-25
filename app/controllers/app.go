@@ -11,7 +11,7 @@ type App struct {
 
 func (c App) Index() revel.Result {
 	var date string = time.Now().Format("2006")
-	var title string = "Password.fun"
+	var title string = "Lösenord.xyz"
 	var count string = "5"
 	if (c.Session["count"] != "") {
 		count = c.Session["count"]

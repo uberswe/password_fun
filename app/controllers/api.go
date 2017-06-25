@@ -28,7 +28,7 @@ func (c Api) Index() revel.Result {
 	// Show some documentation here
 	var action string = c.Action
 	var date string = time.Now().Format("2006")
-	var title string = "Password.fun"
+	var title string = "Lösenord.xyz"
 	return c.Render(action, title, date)
 }
 

@@ -1,6 +1,6 @@
-# Password.fun
+# Lösenord.xyz
 
-Created by [Markus Tenghamn](http://tenghamn.com)
+Skapad av [Markus Tenghamn](http://tenghamn.com)
 
 This is my first project with golang, I personally feel that the code is a bit messy as
 I am learning but things seem to work well at the moment. I would be open to feedback and
@@ -9,7 +9,7 @@ the project further.
 
 The project uses the Revel framework.
 
-See the project live at http://password.fun
+See the project live at http://lösenord.xyz
 
 Credit to this blog post for helping me get Revel running in Docker http://jbeckwith.com/2015/05/08/docker-revel-appengine/
 
