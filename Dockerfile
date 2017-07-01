@@ -10,7 +10,7 @@ RUN go get github.com/revel/revel
 RUN go get github.com/revel/cmd/revel
 
 # Use the revel CLI to start up our application.
-ENTRYPOINT revel run app
+ENTRYPOINT revel run app prod
 
 # Open up the port where the app is running.
 EXPOSE 8080

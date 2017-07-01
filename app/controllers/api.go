@@ -94,7 +94,7 @@ func (c Api) Passwords() revel.Result {
 
 	data := make(map[string]interface{})
 	data["error"] = nil
-	var length = random.Intn(50)
+	var length = 25
 	if (length < 5) {
 		length = 5
 	}
@@ -113,9 +113,9 @@ func (c Api) Passwords() revel.Result {
 	passwords := []Password{
 		{Password: rand_char(length, bytes), Length: length},
 	}
-	var numpass = random.Intn(50)
-	if (numpass < 5) {
-		numpass = 5
+	var numpass = 5
+	if (numpass < 1) {
+		numpass = 1
 	}
 	// What would you possibly need 100 passwords for?
 	if (paramCount > 100) {
@@ -131,7 +131,7 @@ func (c Api) Passwords() revel.Result {
 		}
 		passwords = append(passwords,Password{Password: rand_char(length, bytes), Length: length})
 	}
-	data["href"] = "https://lösenord.xyz" + "/api/v1/passwords"
+	data["href"] = "https://password.fun" + "/api/v1/passwords"
 	data["passwords"] = passwords
 	data["count"] = len(passwords)
 	return c.RenderJSON(data)
