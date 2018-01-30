@@ -25,6 +25,6 @@ Then run the following commands in the project directory
 
 `docker build -t password-fun .`
 
-`docker run -it -p 8080:8080 password-fun`
+`docker run -it -p 8002:8002 password-fun`
 
-The app should now be running on http://127.0.0.1:8080
+The app should now be running on http://127.0.0.1:8002
