@@ -1,16 +1,17 @@
-# Use the official go docker image built on debian.
-#FROM golang:1.7.1
-FROM golang:1.8
+FROM golang:1.16.5-alpine AS builder
 
-WORKDIR /go/src/app
+WORKDIR /app
 COPY . .
 
-# Install revel and the revel CLI.
-RUN go get github.com/revel/revel
-RUN go get github.com/revel/cmd/revel
+RUN apk --no-cache add ca-certificates
 
-# Use the revel CLI to start up our application.
-ENTRYPOINT revel run app prod
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o "main" -ldflags="-w -s" ./cmd/password/main.go
 
-# Open up the port where the app is running.
-EXPOSE 8080
+FROM scratch
+
+COPY --from=builder /app/main /usr/bin/
+COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs/
+
+CMD ["main"]
+
+EXPOSE 80

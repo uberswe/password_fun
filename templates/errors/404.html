@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Not Found</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		* {
+			line-height: 1.2;
+			margin: 0;
+		}
+
+		html {
+			color: #888;
+			display: table;
+			font-family: sans-serif;
+			height: 100%;
+			text-align: center;
+			width: 100%;
+		}
+
+		body {
+			display: table-cell;
+			vertical-align: middle;
+			margin: 2em auto;
+		}
+
+		h1 {
+			color: #555;
+			font-size: 2em;
+			font-weight: 400;
+		}
+
+		p {
+			margin: 0 auto;
+			width: 280px;
+		}
+
+		@media only screen and (max-width: 280px) {
+
+			body, p {
+				width: 95%;
+			}
+
+			h1 {
+				font-size: 1.5em;
+				margin: 0 0 0.3em;
+			}
+
+		}
+
+	</style>
+</head>
+<body>
+<h1>Page Not Found</h1>
+<p>Sorry, but the page you were trying to view does not exist.</p>
+<!-- Start Open Web Analytics Tracker -->
+<script type="text/javascript">
+	//<![CDATA[
+	var owa_baseUrl = 'https://a.beubo.com/';
+	var owa_cmds = owa_cmds || [];
+	owa_cmds.push(['setSiteId', '1dfe77d318ecf35bf0d881fb8a05a33d']);
+	owa_cmds.push(['trackPageView']);
+	owa_cmds.push(['trackClicks']);
+
+	(function() {
+		var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+		owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+		_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+		var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+	}());
+	//]]>
+</script>
+<!-- End Open Web Analytics Code -->
+</body>
+</html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
+
